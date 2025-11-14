@@ -41,6 +41,13 @@ export default function Hero() {
             </div>
           ))}
         </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="mt-14 w-full">
+          <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 p-2">
+            <video className="w-full rounded-2xl" autoPlay loop muted playsInline poster="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=2070&auto=format&fit=crop" src="https://cdn.coverr.co/videos/coverr-blockchain-technology-9585/1080p.mp4" />
+          </div>
+          <p className="text-xs text-white/50 mt-2">Live networks · Social graph + subnets · Ownership trails</p>
+        </motion.div>
       </div>
     </section>
   )

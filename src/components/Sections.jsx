@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Shield, Zap, Award, Users, Lock, Coins, Rocket, Handshake } from 'lucide-react'
+import SubnetShowcase from './SubnetShowcase'
 
 export default function Sections() {
   return (
@@ -93,6 +94,17 @@ export default function Sections() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Interactive subnet ownership showcase */}
+      <section id="subnets" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}>
+          <h2 className="text-3xl sm:text-4xl font-bold">Interactive: Ownership across blockchain subnets</h2>
+          <p className="mt-3 text-white/80 max-w-2xl">Hover or tap nodes to trace how content NFTs, rewards, and permissions move between creators, fans, brands, DAOs, and DeAI oracles—all on-chain.</p>
+          <div className="mt-8">
+            <SubnetShowcase />
+          </div>
+        </motion.div>
       </section>
 
       {/* Social vibe section */}
